@@ -8,7 +8,7 @@ function startGame() {
     console.log('Started')
     startButton.classList.add('hide')
     questionContainerEl.classList.remove('hide')
-    nextQuestion()
+    setNextQuestion()
 }
 
 function nextQuestion() {
@@ -21,7 +21,7 @@ function selectAnswer() {
 
 const questions = [
     {
-        question: 'When did history start? (Hint: Before this date, everything else was a mistake.),
+        question: ('When did history start? (Hint: Before this date, everything else was a mistake.),
         answers: [
             { text: '1776', correct: true },
             { text: '457', correct: false },
@@ -33,7 +33,7 @@ const questions = [
 
 const questions = [
     {
-        question: 'How long did World War 2 last?',
+        question: ('How long did World War 2 last?'),
         answers: [
             { text: '5 years 1 day', correct: true },
             { text: '3 years 354 days', correct: false },
@@ -45,7 +45,7 @@ const questions = [
 
 const questions = [
     {
-        question: 'What is the only country to land humans on the moon?,
+        question: ('What is the only country to land humans on the moon?),
         answers: [
             { text: 'USA', correct: true },
             { text: 'China', correct: false },
@@ -57,7 +57,7 @@ const questions = [
 
 const questions = [
     {
-        question: 'On what day was the state of Utah founded?',
+        question: ('On what day was the state of Utah founded?'),
         answers: [
             { text: 'January 4, 1896', correct: true },
             { text: 'October 15th, 1889', correct: false },
