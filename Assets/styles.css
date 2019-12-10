@@ -27,6 +27,26 @@ body{
 
 .btn {
     border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
 }
+
+.btn:hover {
+    color: blue;
+}
+
+.start-btn{
+    font-size: medium;
+    font-weight: bold;
+    adding: 10px 20px;
+}
+
+.next-btn{
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+
 
 
