@@ -36,17 +36,26 @@ body{
 }
 
 .start-btn{
-    font-size: medium;
+    font-size: x-large;
     font-weight: bold;
-    adding: 10px 20px;
+    padding: 20px 40px;
+    margin: 8px;
 }
 
 .next-btn{
-    font-size: medium;
+    font-size: x-large;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 20px 40px;
+    margin: 8px;
 }
 
+.controls {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
-
+.hide {
+    display: none;
+}
 
