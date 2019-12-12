@@ -4,6 +4,12 @@ const questionContainerElement = document.getElementById('questions-container')
 const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answer-buttons')
 
+
+//timer code
+
+
+//button code
+
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
@@ -11,6 +17,8 @@ nextButton.addEventListener('click', () => {
 })
 
 let shuffledQuestions, currentQuestionIndex
+
+startButton.addEventListener('click', startGame)
 
 
 function startGame() {
@@ -49,26 +57,23 @@ function resetState() {
     }
 }
 
-
-function selectAnswer() {
+//
+function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
     setStatusClass(document.body, correct)
     Array.from(answerButtonElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide')
-    } else {
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
-    }
+
 }
 
 function setStatusClass(element, correct) {
     clearStatusClasss(element)
     if (correct) {
         elecment.classList.add('correct')
+    } else {
+        element.classList.add('wrong')
     }
 }
 
@@ -88,21 +93,21 @@ const questions = [
         ]
     },
     {
-        question: 'When did history begin?',
+        question: 'What country landed humans on the moon?',
         answers: [
-            { text: '1776', correct: true },
-            { text: '457', correct: false },
-            { text: '0', correct: false },
-            { text: '1492', correct: false }
+            { text: 'USA', correct: true },
+            { text: 'Germany', correct: false },
+            { text: 'China', correct: false },
+            { text: 'Russian', correct: false }
         ]
     },
     {
-        question: 'When did history begin?',
+        question: 'How long did World War 2 last?',
         answers: [
-            { text: '1776', correct: true },
-            { text: '457', correct: false },
-            { text: '0', correct: false },
-            { text: '1492', correct: false }
+            { text: '5y 1d', correct: true },
+            { text: '3y 257d', correct: false },
+            { text: '7y 52d', correct: false },
+            { text: '4y 16d', correct: false }
         ]
     },
     {
