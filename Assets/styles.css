@@ -1,4 +1,7 @@
-
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
 
 
 body{
@@ -9,6 +12,14 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
+}
+
+body.correct {
+    color: blue;
+}
+
+body.wrong {
+    color: red;
 }
 
 .container {

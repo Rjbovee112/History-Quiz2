@@ -5,15 +5,11 @@ const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answer-buttons')
 
 
-//timer code
-
-
-//button code
 
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
-    setNextQuestion()
+    nextQuestion()
 })
 
 let shuffledQuestions, currentQuestionIndex
@@ -65,13 +61,20 @@ function selectAnswer(e) {
     Array.from(answerButtonElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide')
+    } else {
+        startButton.innerText = 'Restart'
+        startButton.classList.remove('hide')
+    }
+
 
 }
 
 function setStatusClass(element, correct) {
     clearStatusClasss(element)
     if (correct) {
-        elecment.classList.add('correct')
+        element.classList.add('correct')
     } else {
         element.classList.add('wrong')
     }
@@ -86,10 +89,10 @@ const questions = [
     {
         question: 'When did history begin?',
         answers: [
-            { text: '1776', correct: true },
-            { text: '457', correct: false },
-            { text: '0', correct: false },
-            { text: '1492', correct: false }
+            { text: '1776AD', correct: true },
+            { text: '457AD', correct: false },
+            { text: '32BC', correct: false },
+            { text: '1492AD', correct: false }
         ]
     },
     {
@@ -111,12 +114,12 @@ const questions = [
         ]
     },
     {
-        question: 'When did history begin?',
+        question: 'Who is the greatest modern US President?',
         answers: [
-            { text: '1776', correct: true },
-            { text: '457', correct: false },
-            { text: '0', correct: false },
-            { text: '1492', correct: false }
+            { text: 'Reagan', correct: true },
+            { text: 'Obama', correct: false },
+            { text: 'Kennedy', correct: false },
+            { text: 'Roosevelt', correct: false }
         ]
     }
 ]
