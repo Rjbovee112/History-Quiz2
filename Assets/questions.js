@@ -98,26 +98,26 @@ const questions = [
     {
         question: 'What country landed humans on the moon?',
         answers: [
-            { text: 'USA', correct: true },
-            { text: 'Germany', correct: false },
             { text: 'China', correct: false },
+            { text: 'Germany', correct: false },
+            { text: 'USA', correct: true },
             { text: 'Russian', correct: false }
         ]
     },
     {
         question: 'How long did World War 2 last?',
         answers: [
-            { text: '5y 1d', correct: true },
+            { text: '7y 45d', correct: false },
             { text: '3y 257d', correct: false },
-            { text: '7y 52d', correct: false },
+            { text: '5y 1d', correct: true },
             { text: '4y 16d', correct: false }
         ]
     },
     {
         question: 'Who is the greatest modern US President?',
         answers: [
-            { text: 'Reagan', correct: true },
             { text: 'Obama', correct: false },
+            { text: 'Reagan', correct: true },
             { text: 'Kennedy', correct: false },
             { text: 'Roosevelt', correct: false }
         ]
