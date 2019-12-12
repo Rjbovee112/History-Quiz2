@@ -5,6 +5,10 @@ const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answer-buttons')
 
 startButton.addEventListener('click', startGame)
+nextButton.addEventListener('click', () => {
+    currentQuestionIndex++
+    setNextQuestion()
+})
 
 let shuffledQuestions, currentQuestionIndex
 
@@ -47,12 +51,74 @@ function resetState() {
 
 
 function selectAnswer() {
+    const selectedButton = e.target
+    const correct = selectedButton.dataset.correct
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
+    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+        nextButton.classList.remove('hide')
+    } else {
+        startButton.innerText = 'Restart'
+        startButton.classList.remove('hide')
+    }
+}
 
+function setStatusClass(element, correct) {
+    clearStatusClasss(element)
+    if (correct) {
+        elecment.classList.add('correct')
+    }
+}
+
+function clearStatusClasss(element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
 }
 
 const questions = [
     {
-        question: 'When did history start?',
+        question: 'When did history begin?',
+        answers: [
+            { text: '1776', correct: true },
+            { text: '457', correct: false },
+            { text: '0', correct: false },
+            { text: '1492', correct: false }
+        ]
+    }
+]
+
+
+const questions = [
+    {
+        question: 'When did history begin?',
+        answers: [
+            { text: '1776', correct: true },
+            { text: '457', correct: false },
+            { text: '0', correct: false },
+            { text: '1492', correct: false }
+        ]
+    }
+]
+
+
+const questions = [
+    {
+        question: 'When did history begin?',
+        answers: [
+            { text: '1776', correct: true },
+            { text: '457', correct: false },
+            { text: '0', correct: false },
+            { text: '1492', correct: false }
+        ]
+    }
+]
+
+
+const questions = [
+    {
+        question: 'When did history begin?',
         answers: [
             { text: '1776', correct: true },
             { text: '457', correct: false },
