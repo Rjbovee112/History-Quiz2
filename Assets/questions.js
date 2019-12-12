@@ -86,11 +86,25 @@ const questions = [
             { text: '0', correct: false },
             { text: '1492', correct: false }
         ]
-    }
-]
-
-
-const questions = [
+    },
+    {
+        question: 'When did history begin?',
+        answers: [
+            { text: '1776', correct: true },
+            { text: '457', correct: false },
+            { text: '0', correct: false },
+            { text: '1492', correct: false }
+        ]
+    },
+    {
+        question: 'When did history begin?',
+        answers: [
+            { text: '1776', correct: true },
+            { text: '457', correct: false },
+            { text: '0', correct: false },
+            { text: '1492', correct: false }
+        ]
+    },
     {
         question: 'When did history begin?',
         answers: [
@@ -101,30 +115,3 @@ const questions = [
         ]
     }
 ]
-
-
-const questions = [
-    {
-        question: 'When did history begin?',
-        answers: [
-            { text: '1776', correct: true },
-            { text: '457', correct: false },
-            { text: '0', correct: false },
-            { text: '1492', correct: false }
-        ]
-    }
-]
-
-
-const questions = [
-    {
-        question: 'When did history begin?',
-        answers: [
-            { text: '1776', correct: true },
-            { text: '457', correct: false },
-            { text: '0', correct: false },
-            { text: '1492', correct: false }
-        ]
-    }
-]
-
